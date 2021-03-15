@@ -1,8 +1,10 @@
 import { PuppetPadlocal } from "wechaty-puppet-padlocal";
 import { Contact, log, Message, ScanStatus, Wechaty } from "wechaty";
 
+const token = process.env['WECHATY_PUPPET_PADLOCAL_TOKEN']
+
 const puppet = new PuppetPadlocal({
-    token: "YOUR_PADLOCAL_TOKEN"
+    token,
 })
 
 const bot = new Wechaty({
