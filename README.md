@@ -1,8 +1,8 @@
 ## How To Use
 
-### 1. check node version, need to be $ge than v12.0.0
+### 1. check node version, the most recent version is recommended. ```Node 14.15.4 LTS``` has been well tested. Or you may encounter bugs issued by Node, e.g. [#13](https://github.com/padlocal/wechaty-puppet-padlocal/issues/13)
 ```
-node --version // >= v12.0.0
+node --version // >= v14.0.0
 ``` 
 
 ### 2. install node modules
@@ -14,13 +14,11 @@ RUN: `yarn install` or `npm install`
 ### 3. apply padlocal token
 **Contact [admin](mailto:oxddoxdd@gmail.com) to apply PadLocal token.**
 
-Then replace _YOUR_PADLOCAL_TOKEN_ with granted token in main.ts:
+In your terminal, do:
 ```
-const puppet = new PuppetPadlocal({
-    token: "YOUR_PADLOCAL_TOKEN"
-})
+export WECHATY_PUPPET_PADLOCAL_TOKEN=puppet_padlocal_xxx
 ```
-
+before next step.
 
 ### 4. try the demo
 RUN: `yarn run demo` or `npm run demo`
