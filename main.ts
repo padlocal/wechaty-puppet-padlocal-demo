@@ -4,13 +4,12 @@ import { Contact, log, Message, ScanStatus, Wechaty } from "wechaty";
 // 去掉注释，可以完全打开调试日志
 // log.level("silly");
 
-const puppet = new PuppetPadlocal({
-    token: "YOUR_PADLOCAL_TOKEN"
-})
-
 const bot = new Wechaty({
     name: "TestBot",
-    puppet,
+    puppet: "wechaty-puppet-padlocal",
+    puppetOptions: {
+        token:"YOUR_PADLOCAL_TOKEN",
+    }
 })
 
     .on("scan", (qrcode: string, status: ScanStatus) => {
